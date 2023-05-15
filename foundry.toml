@@ -1,0 +1,16 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+solc_version = '0.8.17' # Version of solc that we use
+remappings = [ # Libraries that we use from node_modules and are used by the smart contracts
+  "@openzeppelin/=lib/openzeppelin-contracts/",
+  "forge-std/=lib/forge-std/src/",
+]
+optimizer = true # Enable or disable the solc optimizer
+optimizer_runs = 999999 # The number of optimizer runs
+verbosity = 3 # The verbosity of tests (3: Print execution traces for failing tests)
+bytecode_hash = "none" # For deterministic code
+block_timestamp = 1622400000 # Timestamp for tests (non-zero)
+
+# See more config options https://github.com/foundry-rs/foundry/tree/master/config
